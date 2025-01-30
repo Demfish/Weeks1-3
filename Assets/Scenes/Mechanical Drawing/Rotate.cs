@@ -13,8 +13,8 @@ public class Rotate : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Vector3 rot = transform.eulerAngles;
-        rot.z += (float)0.1; // Controls the speed of the rotation of the planet, float needed for conversion
-        transform.eulerAngles = rot; 
+        Vector3 rotate = transform.eulerAngles;
+        rotate.z += (float)0.1; // Controls the speed of the rotation of the planet, float needed for conversion
+        transform.eulerAngles = rotate; 
     }
 }
