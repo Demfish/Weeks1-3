@@ -6,7 +6,7 @@ public class Lerping : MonoBehaviour
 {
     public AnimationCurve curve;
 
-    [Range(0, 1)]
+    [Range(0, 2)]
     float t = 0f;
     public float speed = 1f;
     public Transform start;
@@ -23,5 +23,9 @@ public class Lerping : MonoBehaviour
     {
         t += Time.deltaTime * speed;
         transform.position = Vector3.Lerp(start.position, end.position, curve.Evaluate(t));
+        if(t > 1.99f)
+        {
+            t = 0f;
+        }
     }
 }
